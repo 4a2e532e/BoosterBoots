@@ -5,6 +5,7 @@
   <version>1.10.0</version>
   <name>BoosterBoots</name>
   <build>
+  <finalName>${project.artifactId}</finalName>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
