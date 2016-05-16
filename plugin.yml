@@ -1,0 +1,38 @@
+name: Booster-Boots
+main: boosterBoots.BBMain
+version: 1.10.0
+author: 4a2e532e
+commands:
+  bb:
+    permission: bb.admin.reload
+permissions:
+  bb.*:
+    default: op
+    children:
+      bb.use: true
+      bb.craft: true
+      bb.particles.all: true
+  bb.craft:
+    default: false
+  bb.use:
+    default: false
+  bb.particles.all:
+    default: false
+    children:
+      bb.particles.red: true
+      bb.particles.orange: true
+      bb.particles.yellow: true
+      bb.particles.blue: true
+      bb.particles.green: true
+  bb.particles.red:
+    default: false
+  bb.particles.orange:
+    default: false
+  bb.particles.yellow:
+    default: false
+  bb.particles.blue:
+    default: false
+  bb.particles.green:
+    default: false
+  bb.admin.reload:
+    default: op
