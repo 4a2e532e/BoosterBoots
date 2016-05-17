@@ -1,6 +1,6 @@
 name: Booster-Boots
 main: boosterBoots.BBMain
-version: 1.10.0
+version: 1.11.0
 author: 4a2e532e
 commands:
   bb:

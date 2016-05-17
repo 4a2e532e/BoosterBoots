@@ -288,9 +288,14 @@ public class BBMain extends JavaPlugin{
 			@SuppressWarnings("resource")
 			Scanner scanner = new Scanner(versionFile.openStream());
 			String newestVersion = scanner.next();
+			String news = "Update news: ";
+			while(scanner.hasNext()){
+				news = news+" "+scanner.next();
+			}
 			if(!this.getDescription().getVersion().equals(newestVersion)){
 				Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: You are currently using version: "+this.getDescription().getVersion()+", Newest version is: "+newestVersion);
 				Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: You are using an outdated version ! You can get the newest version here: "+ChatColor.YELLOW+"https://www.spigotmc.org/resources/booster-boots.21792/");
+				Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.WHITE+news);
 			}
 		} catch (Exception e) {
 			Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.RED+"[WARNING]: Unable to perform version check ! You can get the newest version here: https://www.spigotmc.org/resources/booster-boots.21792/");
