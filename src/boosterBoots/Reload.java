@@ -27,7 +27,7 @@ public class Reload implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command arg1, String label, String[] arg3) {
-		if((sender instanceof Player || sender instanceof ConsoleCommandSender) && arg3[0].equals("reload")){
+		if((sender instanceof Player || sender instanceof ConsoleCommandSender) && arg3.length > 0 && arg3[0].equals("reload")){
 			main.reloadConfig();
 			main.loadConfig();
 			sender.sendMessage(ChatColor.AQUA+"[Booster Boots] "+ChatColor.GREEN+"Configuration reloaded!");

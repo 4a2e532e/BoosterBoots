@@ -41,6 +41,7 @@ public class BoosterBoots implements Listener{
 
 	boolean enableParticles;
 	boolean warnElytra;
+	static boolean fuelRequired;
 
 	double particleAmount;
 
@@ -136,6 +137,12 @@ public class BoosterBoots implements Listener{
 	}
 
 	public static boolean containsFuel(Player p){
+
+		//TODO testing required
+		if(!BoosterBoots.fuelRequired){
+			return true;
+		}
+
 		for(ItemStack itemStack: p.getInventory()){
 			if(itemStack!=null){
 				if(itemStack.getType()==fuel){
