@@ -147,6 +147,7 @@ public class BBMain extends JavaPlugin{
 		config.addDefault("Enable particles", true);
 		config.addDefault("Particle amount", 5);
 		config.addDefault("Warn player when elytra is about to break", true);
+		config.addDefault("Fuel Required", true);
 		config.addDefault("fuel", "FIREBALL");
 		config.addDefault("Allow vertical takeoff", true);
 		config.addDefault("NoCheatPlus exemption ticks", 200);
@@ -170,6 +171,7 @@ public class BBMain extends JavaPlugin{
 		bbemListener.enableParticles = config.getBoolean("Enable particles");
 		bbemListener.particleAmount = config.getDouble("Particle amount");
 		bbemListener.warnElytra = config.getBoolean("Warn player when elytra is about to break");
+		BoosterBoots.fuelRequired = config.getBoolean("Fuel Required");
 		BoosterBoots.fuel = Material.valueOf(config.getString("fuel"));
 		boolVerticalTakeoffEnabled = config.getBoolean("Allow vertical takeoff");
 		nocheatplusExemption = config.getInt("NoCheatPlus exemption ticks");
