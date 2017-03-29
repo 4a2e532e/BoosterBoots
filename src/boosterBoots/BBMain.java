@@ -158,7 +158,7 @@ public class BBMain extends JavaPlugin{
 		config.addDefault("Leather_Booster_Boots_Recipe", defaultLeatherRecipe);
 		config.addDefault("Chain_Booster_Boots_Recipe", defaultChainRecipe);
 		config.addDefault("Store advertisement", "These particles are locked!");
-		config.addDefault("Do version check", true);
+		config.addDefault("Do version check", false);
 		config.options().copyDefaults(true);
 		saveConfig();
 
