@@ -27,6 +27,8 @@ import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.util.Vector;
 
@@ -61,6 +63,8 @@ public class BoosterBoots implements Listener{
 			FireworkMeta fm = firework.getFireworkMeta();
 			fm.addEffect(FireworkEffect.builder().withColor(c).with(t).withFade(Color.BLACK).build());
 			firework.setFireworkMeta(fm);
+			//Prevent player from taking damage from the rocket explosion
+			p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1, 255));
 			firework.detonate();
 		}
 	}
