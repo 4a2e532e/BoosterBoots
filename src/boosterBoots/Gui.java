@@ -19,6 +19,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.inventory.PrepareAnvilEvent;
@@ -72,7 +73,7 @@ public class Gui implements Listener {
 	public void onPlayerInteractEvent(PlayerInteractEvent event){
 		try{
 
-			if(event.getItem()==null && event.getPlayer().getInventory().getBoots().getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6){
+			if(event.getItem()==null && event.getPlayer().getInventory().getBoots().getEnchantmentLevel(Enchantment.PROTECTION_FALL)>=6 && event.getAction() != Action.PHYSICAL){
 
 				//Open hopper inventory with colored wool blocks
 				Inventory inventory = Bukkit.getServer().createInventory(null, InventoryType.DISPENSER, ChatColor.AQUA+BBMain.guiTitle);
