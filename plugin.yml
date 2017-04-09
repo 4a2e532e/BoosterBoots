@@ -5,6 +5,8 @@ author: 4a2e532e
 commands:
   bb:
     permission: bb.admin.reload
+    usage: '/bb reload'
+    description: 'Reloads the config'
 permissions:
   bb.*:
     default: op
